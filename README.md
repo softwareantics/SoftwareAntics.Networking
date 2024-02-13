@@ -1,7 +1,5 @@
 # SoftwareAntics.Networking
 
-# Project Name
-
 This is a *WIP* cross-platform TCP networking library developed in C#.
 
 ## Getting Started
