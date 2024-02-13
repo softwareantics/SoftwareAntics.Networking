@@ -16,13 +16,13 @@ First off, don't be intimidated and the best thing you can do if you're having t
 
 **Please:**
 
-- **DO** follow our [code of conduct](https://github.com/SoftwareAntics/Project Name/tree/master/.github/docs/code_of_conduct.md).
+- **DO** follow our [code of conduct](https://github.com/SoftwareAntics/SoftwareAntics.Networking/tree/master/.github/docs/code_of_conduct.md).
 - **DO** talk to us on our [Discord](https://discord.gg/qewu6fNgv7) server.
 - **DO** keep discussions related to contributions centered around the issues at hand.
 - **DO** use the comment sections in the issues and pull requests that are relevant to said issues and PRs. This not only keeps conversations contained in the issues and PRs, it sends notifications to the project maintainers, and shows the conversation to the community/public.
 - **DO** leave a comment in the issue that you are interested in to let the project maintainers know that you would like to work on the issue.
 - **DO** create PRs with the title matching **EXACTLY** to the associated issue's title. PRs with mismatching titles will not pass status checks and cannot be merged.
-- **DO** use [pull request templates](https://github.com/softwareantics/Project Name/tree/master/.github/pull_request_template.md) when creating PRs. Pull requests without a PR template will not be merged.
+- **DO** use [pull request templates](https://github.com/softwareantics/SoftwareAntics.Networking/tree/master/.github/pull_request_template.md) when creating PRs. Pull requests without a PR template will not be merged.
 - **DO** use [Early Pull Requests](https://medium.com/practical-blend/pull-request-first-f6bb667a9b6).
 - **DON'T** start working on a PR until you get confirmation from a project maintainer and the issue is assigned to you. We aim to ensure that you invest your time efficiently on issues that align with your permissions and contributions.
 - **DON'T** make PRs that don't directly affect the end user, such as style changes. These are best done as part of a PR related to the area in question. Documentation is fine (and encouraged!), as is useful to the end user.
@@ -38,7 +38,7 @@ Contributions must maintain API signature and behavioral compatibility. Contribu
 
 We only have one main branch: `master`, why? **KISS** ([Keep it simple, stupid!](https://en.wikipedia.org/wiki/KISS_principle)).
 
-Our projects follow a strict naming policy. The purpose is for clarity and consistency, and it helps bind the information between GIT and GitHub. Our project is split up into multiple areas (see the tags [here](https://github.com/softwareantics/Project Name/labels?q=area), we use this to our advantage when implementing features or fixing bugs. Below is a general guide on our naming policy:
+Our projects follow a strict naming policy. The purpose is for clarity and consistency, and it helps bind the information between GIT and GitHub. Our project is split up into multiple areas (see the tags [here](https://github.com/softwareantics/SoftwareAntics.Networking/labels?q=area), we use this to our advantage when implementing features or fixing bugs. Below is a general guide on our naming policy:
 
 - **Features:** `feature/[area]/issue-number` - an example would be `feature/rendering/423`.
 - **Bugs:** `bug/[area]issue-number` - an example would be `bug/audio/451`.
@@ -58,7 +58,7 @@ To better track changes and who does what, it's a good practice to give GIT some
 
 #### **2. Fork the repository**
 
-[Fork](https://github.com/softwareantics/Project Name/fork) the repository.
+[Fork](https://github.com/softwareantics/SoftwareAntics.Networking/fork) the repository.
 
 > **Note**
 > _For more information on how to fork a repository, go [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo)._
@@ -68,7 +68,7 @@ To better track changes and who does what, it's a good practice to give GIT some
 Clone the forked repository to your machine so you can add your changes.  Swap `johndoe` with your username.
 
 ```cli
-git clone https://github.com/johndoe/Project Name.git
+git clone https://github.com/johndoe/SoftwareAntics.Networking.git
 ```
 
 #### **4. Your First Commit**
@@ -94,7 +94,7 @@ Commit your changes in small, incremental steps so that the maintainers can revi
 
 #### **7. Notify a Maintainer for Review**
 
-Notify a maintainer when you're ready for your PR to be reviewed and merged. Please note that we have a strict PR review process, especially around _documentation_ and _styling_. If the PR does not meet the requirements you'll likely need to make some changes to merge your feature. You can find more information on our review process [here](https://github.com/softwareantics/Project Name/tree/master/Review).
+Notify a maintainer when you're ready for your PR to be reviewed and merged. Please note that we have a strict PR review process, especially around _documentation_ and _styling_. If the PR does not meet the requirements you'll likely need to make some changes to merge your feature. You can find more information on our review process [here](https://github.com/softwareantics/SoftwareAntics.Networking/tree/master/Review).
 
 <h2 style="border:0;font-weight:bold" align="center">Recommended Extensions</h2>
 
@@ -111,6 +111,6 @@ Whilst it is not a _requirement_ to install these extensions and use them in you
 
 <h2 style="border:0;font-weight:bold" align="center">"Help wanted" & "Good first issue"</h2>
 
-<img alt="GitHub issues" src="https://img.shields.io/github/issues/softwareantics/Project Name/🏁%20Good%20First%20Issue?color=7057ff&label=Good%20First%20Issues">
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/softwareantics/SoftwareAntics.Networking/🏁%20Good%20First%20Issue?color=7057ff&label=Good%20First%20Issues">
 
 We may mark some issues with the label **"good first issue"** which indicates that an issue is straightforward and is a good place to start if you're interested in contributing but are new to the codebase.
