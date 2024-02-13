@@ -12,12 +12,9 @@ Only the project team will merge changes that improve the library significantly.
 
 <h2 style="border:0;font-weight:bold" align="center">DO's and DON'Ts</h2>
 
-First off, don't be intimidated and the best thing you can do if you're having trouble following out contribution guidelines is to talk to us on our [Discord](https://discord.gg/qewu6fNgv7) server.
-
 **Please:**
 
 - **DO** follow our [code of conduct](https://github.com/SoftwareAntics/SoftwareAntics.Networking/tree/master/.github/docs/code_of_conduct.md).
-- **DO** talk to us on our [Discord](https://discord.gg/qewu6fNgv7) server.
 - **DO** keep discussions related to contributions centered around the issues at hand.
 - **DO** use the comment sections in the issues and pull requests that are relevant to said issues and PRs. This not only keeps conversations contained in the issues and PRs, it sends notifications to the project maintainers, and shows the conversation to the community/public.
 - **DO** leave a comment in the issue that you are interested in to let the project maintainers know that you would like to work on the issue.
