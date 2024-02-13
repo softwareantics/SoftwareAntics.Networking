@@ -1,11 +1,5 @@
 # SoftwareAntics.Networking
 
-- Replace Project Name in /github
-- Add dependabbot to repository
-- Add CI/CD pipeline
-  - Status checks
-  - Use Circle CI
-
 # Project Name
 
 This is a *WIP* cross-platform TCP networking library developed in C#.
