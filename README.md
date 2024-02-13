@@ -1,6 +1,5 @@
-# TODO
+# SoftwareAntics.Networking
 
-- Replace Project Name in README
 - Replace Project Name in /github
 - Add dependabbot to repository
 - Add CI/CD pipeline
@@ -9,7 +8,7 @@
 
 # Project Name
 
-This is a *WIP* cross-platform project developed in C#.
+This is a *WIP* cross-platform TCP networking library developed in C#.
 
 ## Getting Started
 
@@ -22,7 +21,7 @@ Below are the prerequisites and instructions for building the project.
 ### Building on Windows, Mac, and Linux
 
 1. Download or clone the repository.
-2. Open `ProjectName.sln` in your preferred IDE.
+2. Open `SoftwareAntics.Networking.sln` in your preferred IDE.
 3. Build the solution (or use `dotnet build`).
 
 ### Download
@@ -31,4 +30,4 @@ Below are the prerequisites and instructions for building the project.
 
 ## Contributing
 
-Follow our contribution guidelines [here](https://github.com/softwareantics/ProjectName/blob/master/.github/CONTRIBUTING.md) if you wish to contribute to the project.
+Follow our contribution guidelines [here](https://github.com/softwareantics/SoftwareAntics.Networking/blob/master/.github/CONTRIBUTING.md) if you wish to contribute to the project.
