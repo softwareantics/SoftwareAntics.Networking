@@ -1,6 +1,7 @@
 namespace SoftwareAntics.Networking.Tests.Clients;
 
 using System;
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using NSubstitute;
@@ -9,6 +10,7 @@ using SoftwareAntics.Networking.Clients;
 using SoftwareAntics.Networking.Invocation;
 
 [TestFixture]
+[SuppressMessage("Design", "CA1001:Types that own disposable fields should be disposable", Justification = "Mocking")]
 public sealed class ClientTests
 {
     private Client client;

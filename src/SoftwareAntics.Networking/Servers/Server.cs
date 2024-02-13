@@ -4,6 +4,7 @@
 
 namespace SoftwareAntics.Networking.Servers;
 
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SoftwareAntics.Networking.Invocation;
@@ -14,6 +15,7 @@ public class Server : IServer
 
     private ITcpListenerInvoker? listener;
 
+    [ExcludeFromCodeCoverage(Justification = "Public API")]
     public Server(ILogger<Server> logger, IOptionsSnapshot<ServerOptions> options)
         : this(logger, options, new TcpListenerFactory())
     {
@@ -29,15 +31,6 @@ public class Server : IServer
 
         this.Address = options.Value.Address;
         this.Port = options.Value.Port;
-    }
-
-    internal Server(ILogger<Server> logger, ITcpListenerInvoker listener)
-    {
-        this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
-        this.listener = listener ?? throw new ArgumentNullException(nameof(listener));
-
-        this.Address = "127.0.0.1";
-        this.Port = 45455;
     }
 
     ~Server()
