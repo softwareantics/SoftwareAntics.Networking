@@ -4,11 +4,17 @@
 
 namespace SoftwareAntics.Networking.Clients;
 
+using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Net.Sockets;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using SoftwareAntics.Networking.Invocation;
 
+/// <summary>
+///   Provides a standard implementation of an <see cref="IClient"/>.
+/// </summary>
+/// <seealso cref="IClient"/>
 public class Client : IClient
 {
     /// <summary>
@@ -21,12 +27,48 @@ public class Client : IClient
     /// </summary>
     private ITcpClientInvoker? client;
 
+    /// <summary>
+    ///   Initializes a new instance of the <see cref="Client"/> class.
+    /// </summary>
+    /// <param name="logger">
+    ///   The logger.
+    /// </param>
+    /// <param name="options">
+    ///   The client options used to configure the client connection properties.
+    /// </param>
+    /// <exception cref="ArgumentNullException">
+    ///   Thrown if the one of the following parameters are null:
+    ///   <list type="bullet">
+    ///     <item><paramref name="logger"/></item>
+    ///     <item><paramref name="options"/></item>
+    ///   </list>
+    /// </exception>
     [ExcludeFromCodeCoverage(Justification = "Public API")]
     public Client(ILogger<Client> logger, IOptionsSnapshot<ClientOptions> options)
         : this(logger, options, new TcpClientFactory())
     {
     }
 
+    /// <summary>
+    ///   Initializes a new instance of the <see cref="Client"/> class.
+    /// </summary>
+    /// <param name="logger">
+    ///   The logger.
+    /// </param>
+    /// <param name="options">
+    ///   The client options used to configure the client connection properties.
+    /// </param>
+    /// <param name="factory">
+    ///   The factory used to handle instantiating an underlying <see cref="TcpClient"/>.
+    /// </param>
+    /// <exception cref="ArgumentNullException">
+    ///   Thrown if the one of the following parameters are null:
+    ///   <list type="bullet">
+    ///     <item><paramref name="logger"/></item>
+    ///     <item><paramref name="options"/></item>
+    ///     <item><paramref name="factory"/></item>
+    ///   </list>
+    /// </exception>
     internal Client(ILogger<Client> logger, IOptionsSnapshot<ClientOptions> options, ITcpClientFactory factory)
     {
         ArgumentNullException.ThrowIfNull(options, nameof(options));
@@ -47,8 +89,13 @@ public class Client : IClient
         this.Dispose(false);
     }
 
+    /// <inheritdoc/>
     public string Address { get; }
 
+    /// <inheritdoc/>
+    /// <exception cref="ObjectDisposedException">
+    ///   Thrown if this <see cref="Client"/> is disposed.
+    /// </exception>
     public bool IsConnected
     {
         get
@@ -58,6 +105,7 @@ public class Client : IClient
         }
     }
 
+    /// <inheritdoc/>
     public int Port { get; }
 
     /// <summary>
@@ -68,6 +116,10 @@ public class Client : IClient
     /// </value>
     protected bool IsDisposed { get; private set; }
 
+    /// <inheritdoc/>
+    /// <exception cref="ObjectDisposedException">
+    ///   Thrown if this <see cref="Client"/> is disposed.
+    /// </exception>
     public void Connect()
     {
         ObjectDisposedException.ThrowIf(this.IsDisposed, this);
@@ -85,6 +137,10 @@ public class Client : IClient
         }
     }
 
+    /// <inheritdoc/>
+    /// <exception cref="ObjectDisposedException">
+    ///   Thrown if this <see cref="Client"/> is disposed.
+    /// </exception>
     public void Disconnect()
     {
         ObjectDisposedException.ThrowIf(this.IsDisposed, this);
